@@ -18,7 +18,7 @@ export default function Request() {
             </div>
 
             <div className="req-form">
-                <h2>Request Commssion</h2>
+                <h2>Request Commission</h2>
                 <form action={submit}>
                     <div>
                         <label for="name">Name: </label>

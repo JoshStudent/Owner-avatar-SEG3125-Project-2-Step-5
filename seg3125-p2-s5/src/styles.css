@@ -54,8 +54,8 @@ code {
 }
 
 .dir {
-    text-decoration: none;
-    color: #540c5e;
+    text-decoration: underline;
+    color: white;
 }
 
 .dir:hover { 
@@ -126,18 +126,51 @@ li a:hover {
     border: 1px solid #999;
 }
 
-.sub-section {
+.row {
     margin-bottom: 20px;
-    border: 1px solid #999;
-    padding: 3px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.sub-section p {
+.sub-section-left {
+    border: 1px solid #999;
+    padding: 3px;
+    float: left;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sub-section-left p {
     margin-top: -10px;
     margin-bottom: 5px;
-    border-left: 5px solid white;
-    border-radius: 5px;
-    padding-left: 2px;
+}
+
+.sub-section-right {
+    border: 1px solid #999;
+    padding: 3px;
+    float: right;
+    flex: 1;
+}
+
+.sub-section-right p {
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gallery {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .gallery-item {

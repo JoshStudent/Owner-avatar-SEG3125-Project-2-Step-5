@@ -6,6 +6,28 @@ import lgHash from 'lightgallery/plugins/hash';
 //import { LightGallery as ILightGallery } from 'lightgallery/lightgallery';
 
 export default function Gallery() {
+    function displayImg(pSize, pSrc, pArtist, pTitle, pAltText) {
+        var size = pSize[0] + "-" + pSize[1];
+        var caption = "<h4>Artist: <a href='#/Artists#" + pArtist + "' >" + pArtist + " </a></h4><p>" + pTitle + ".</p>";
+        return (
+            <>
+                <a
+                    data-lg-size={size}
+                    href="/"    
+                    className="gallery-item"
+                    data-src={require("./assets/" + pSrc)}
+                    data-sub-html={caption}
+                >
+                    <img
+                        alt={pAltText}
+                        height="350"
+                        src={require("./assets/" + pSrc)}
+                    />
+                </a>
+            </>
+        )
+    }
+
     return (
         <>
             <div className="main">
@@ -13,129 +35,19 @@ export default function Gallery() {
             </div>
             <p className="header-caption">This is all the art we have collected. Click on an image for more information.</p>
 
-            <div className="App">
+            <div className="gallery">
                 <LightGallery
                     plugins={[lgZoom, lgShare, lgHash]}
                     speed={500}
                 >
-                    <a
-                        data-lg-size="1200-1788"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img1.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#LeonardoDaVinci' >Leonardo da Vinci </a></h4><p>Mona Lisa.</p>"
-                    >
-                        <img
-                            alt="Mona Lisa."
-                            height="350"
-                            src={require('./assets/img1.jpg')}
-                        />
-                    </a>
+                    {displayImg([1360, 1480], 'DN-img1.jpg', "Dana N-L", "Blue Person", "alt txt")}
+                    {displayImg([1600, 1200], 'JZ-img1.png', "JZ", "Flower VS It", "alt txt")}
+                    {displayImg([1080, 1336], 'NZ-img1.jpg', "Nzmpo", "Blood", "alt txt")}
+                    {displayImg([1234, 1514], 'DN-img2.jpg', "Dana N-L", "Bathroom", "alt txt")}
+                    {displayImg([695, 896], 'JZ-img2.png', "JZ", "Zelda", "alt txt")}
+                    {displayImg([1194, 1516], 'DN-img3.jpg', "Dana N-L", "Character Concept", "alt txt")}
+                    {displayImg([1080, 1077], 'NZ-img2.jpg', "Nzmpo", "Mirko", "alt txt")}
 
-                    <a
-                        data-lg-size="1360-1480"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img2.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#DanaNL' >Dana N-L </a></h4><p>Blue Person.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Blue Person."
-                            height="350"
-                            src={require('./assets/img2.jpg')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="1600-833"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img3.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#LeonardoDaVinci' >Leonardo da Vinci</a></h4><p>The Last Supper.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="The Last Supper."
-                            height="350"
-                            src={require('./assets/img3.jpg')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="1600-1200"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img4.png')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#JZ' >JZ</a></h4><p>Flower VS It.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Flower VS It."
-                            height="350"
-                            src={require('./assets/img4.png')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="1234-1514"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img5.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#DanaNL' >Dana N-L </a></h4><p>Bathroom.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Bathroom."
-                            height="350"
-                            src={require('./assets/img5.jpg')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="695-896"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img6.png')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#JZ' >JZ</a></h4><p>Zelda.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Zelda."
-                            height="350"
-                            src={require('./assets/img6.png')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="420-659"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img7.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#LeonardoDaVinci' >Leonardo da Vinci</a></h4><p>Self Portrait.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Self Portrait."
-                            height="350"
-                            src={require('./assets/img7.jpg')}
-                        />
-                    </a>
-
-                    <a
-                        data-lg-size="1194-1516"
-                        href="/"
-                        className="gallery-item"
-                        data-src={require('./assets/img8.jpg')}
-                        data-sub-html="<h4>Artist: <a href='#/Artists#DanaNL' >Dana N-L </a></h4><p>Character.</p>"
-                    >
-                        <img
-                            className="img-responsive"
-                            alt="Character."
-                            height="350"
-                            src={require('./assets/img8.jpg')}
-                        />
-                    </a>
                 </LightGallery>
             </div>
         </>
