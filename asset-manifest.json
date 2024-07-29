@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/SEG3125-Project-2-Step-5/static/css/main.5ca6ed18.css",
+    "main.js": "/SEG3125-Project-2-Step-5/static/js/main.ea524732.js",
+    "static/media/JZ-img1.png": "/SEG3125-Project-2-Step-5/static/media/JZ-img1.6dcee6928efb00fcb281.png",
+    "static/media/DN-img2.jpg": "/SEG3125-Project-2-Step-5/static/media/DN-img2.7c41f2a8d2a677797826.jpg",
+    "static/media/JZ-img2.png": "/SEG3125-Project-2-Step-5/static/media/JZ-img2.f1af146157ccf847765a.png",
+    "static/media/DN-img3.jpg": "/SEG3125-Project-2-Step-5/static/media/DN-img3.b5ee8e59a4ff0415d572.jpg",
+    "static/media/DN-img1.jpg": "/SEG3125-Project-2-Step-5/static/media/DN-img1.31d01bf646b8040c7ede.jpg",
+    "static/media/home.png": "/SEG3125-Project-2-Step-5/static/media/home.0730e2e6d8e0aef6c04b.png",
+    "static/media/NZ-img2.jpg": "/SEG3125-Project-2-Step-5/static/media/NZ-img2.c6d836c3cee7f699242e.jpg",
+    "static/media/NZ-img1.jpg": "/SEG3125-Project-2-Step-5/static/media/NZ-img1.6819f24ce5fa149240ba.jpg",
+    "static/media/bell.png": "/SEG3125-Project-2-Step-5/static/media/bell.3d91540cbd511c3a3756.png",
+    "static/media/gallery.png": "/SEG3125-Project-2-Step-5/static/media/gallery.236b025239814fc0afb1.png",
+    "static/media/artist.png": "/SEG3125-Project-2-Step-5/static/media/artist.026bc2e1a7a25a33bd9f.png",
+    "index.html": "/SEG3125-Project-2-Step-5/index.html",
+    "main.5ca6ed18.css.map": "/SEG3125-Project-2-Step-5/static/css/main.5ca6ed18.css.map",
+    "main.ea524732.js.map": "/SEG3125-Project-2-Step-5/static/js/main.ea524732.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ca6ed18.css",
+    "static/js/main.ea524732.js"
+  ]
+}
