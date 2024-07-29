@@ -15,51 +15,13 @@ body {
     color: white;
 }
 
-h1 {
-    margin-top: 0;
-    font-size: 30px;
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-h3 {
-    margin-top: 0;
-    font-size: 18px;
-}
-
-h4 {
-    margin-top: 0;
-    font-size: 16px;
-}
-
-h5 {
-    margin-top: 0;
-    font-size: 14px;
-}
-
-h6 {
-    margin-top: 0;
-    font-size: 12px;
-}
-
-code {
-    font-size: 1.2em;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .dir {
     text-decoration: underline;
     color: white;
 }
 
 .dir:hover { 
-    color: #3f0647;
+    color: #5b0f66;
 }
 
 .navbar {
@@ -83,8 +45,9 @@ code {
 li a {
     display: block;
     color: white;
+    font-weight: bold;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
 }
 
@@ -93,14 +56,20 @@ li a:hover {
     background-color: #220426;
 }
 
+.navimg {
+    height:20px;
+    width:20px;
+    object-fit: contain;
+    margin-bottom: -7px;
+}
+
 .main {
+    font-size: 35px;
     color: white;
-    border: 1px solid #999;
-    font-size: 24px;
+    border: 3px solid white;
+    border-radius: 4px;
     font-weight: bold;
     line-height: 33px;
-    height: 34px;
-    padding: 0;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -113,8 +82,15 @@ li a:hover {
 .featured {
     text-align: center;
     margin-bottom: 20px;
-    border: 2px solid #999;
+    border: 2px solid white;
+    border-radius: 2px;
     padding: 6px;
+}
+
+.featured h2 {
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .featured p {
@@ -123,7 +99,15 @@ li a:hover {
 }
 
 .featured-img {
-    border: 1px solid #999;
+    width: 80%;
+    object-fit: contain;
+    border: 1px solid white;
+}
+
+.featured-artist {
+    width: 35%;
+    object-fit: contain;
+    border: 1px solid white;
 }
 
 .row {
@@ -134,8 +118,16 @@ li a:hover {
     flex-flow: row wrap;
 }
 
+.row h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
 .sub-section-left {
-    border: 1px solid #999;
+    border: 1px solid white;
     padding: 3px;
     float: left;
     flex: 1;
@@ -143,19 +135,19 @@ li a:hover {
 }
 
 .sub-section-left p {
-    margin-top: -10px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .sub-section-right {
-    border: 1px solid #999;
+    border: 1px solid white;
     padding: 3px;
     float: right;
     flex: 1;
 }
 
 .sub-section-right p {
-    margin-top: -10px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -174,7 +166,7 @@ li a:hover {
 }
 
 .gallery-item {
-    margin: 5px;
+    margin: 4px 2px 4px 2px;
 }
 
 .artist {
@@ -183,6 +175,11 @@ li a:hover {
     padding: 3px;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.artist h2{
+    margin-top: 0;
+    font-size: 20px;
 }
 
 .artist p {
@@ -197,8 +194,10 @@ li a:hover {
     margin-bottom: 10px;
 }
 
-.news-section h3 {
-    border-bottom: 1px solid #999;
+.sub-header {
+    border-bottom: 1px solid white;
+    margin-top: 0;
+    padding-bottom: 3px;
 }
 
 .req-form {
@@ -209,6 +208,41 @@ li a:hover {
     margin-bottom: 10px;
 }
 
-label {
-    color:white;
+.input-section{
+    margin-bottom: 5px;
+}
+
+.input-section label {
+    font-weight: bold;
+}
+
+.input-section textarea {
+    resize: vertical;
+    min-height: 40px;
+}
+
+.input-section select {
+    background-color: #5b0f66;
+    color: white;
+    padding: 8px 16px 8px 10px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.input-section select option:hover {
+    background-color: #37073d
+}
+
+button {
+    background-color: #5b0f66;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #37073d;
+    color: #f4ebf5;
+    border-color: #f4ebf5;
 }

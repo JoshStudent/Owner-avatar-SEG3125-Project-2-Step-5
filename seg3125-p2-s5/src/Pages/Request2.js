@@ -1,12 +1,11 @@
 import { useState } from 'react';
 
-export default function Request(props) {
+export default function Request2() {
     const lang = localStorage.getItem('StoredLang') || "en";
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        artist: '',
         desc: '',
     });
 
@@ -76,16 +75,7 @@ export default function Request(props) {
                         </div>
 
                         <div className="input-section">
-                            <label for="artist">Scegli un artista: </label>
-                            <select name="artist" value={formData.artist} onChange={handleChange}>
-                                <option value="Dana N-L">Dana N-L</option>
-                                <option value="JZ">JZ</option>
-                                <option value="Nzmpo">Nzmpo</option>
-                            </select>
-                        </div>
-
-                        <div className="input-section">
-                            <textarea name="desc" value={formData.desc} onChange={handleChange} rows="5" cols="35" placeholder="Descrivi qui la commissione..." />
+                            <textarea name="desc" value={formData.desc} onChange={handleChange} rows="5" cols="35" placeholder="Descrivi te stesso (includi qui i link ai social media)" />
                             {errors.desc && <span className="error-message"> {errors.desc} </span>}
                         </div>
 
@@ -107,7 +97,7 @@ export default function Request(props) {
 
             if (Object.keys(newErrors).length === 0) {
                 console.log('Form submitted successfully!');
-                alert("Success! You should hear back from the artist soon.")
+                alert("Success!")
             } else {
                 console.log(`Form submission failed
              due to validation errors.`);
@@ -136,10 +126,10 @@ export default function Request(props) {
 
         return (
             <>
-                <h1 className="main">Commissions</h1>
+                <h1 className="main">Artist Application</h1>
 
                 <div className="req-form">
-                    <h2 className="sub-header">Request Commission</h2>
+                    <h2 className="sub-header">Join the Alley today!</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="input-section">
                             <label>Name: </label>
@@ -154,21 +144,12 @@ export default function Request(props) {
                         </div>
 
                         <div className="input-section">
-                            <label for="artist">Choose an Artist: </label>
-                            <select name="artist" value={formData.artist} onChange={handleChange}>
-                                <option value="Dana N-L">Dana N-L</option>
-                                <option value="JZ">JZ</option>
-                                <option value="Nzmpo">Nzmpo</option>
-                            </select>
-                        </div>
-
-                        <div className="input-section">
-                            <textarea name="desc" value={formData.desc} onChange={handleChange} rows="5" cols="35" placeholder="Describe the commission here..." />
+                            <textarea name="desc" value={formData.desc} onChange={handleChange} rows="5" cols="35" placeholder="Describe yourself (include links to social media here)" />
                             {errors.desc && <span className="error-message"> {errors.desc} </span>}
                         </div>
 
                         <div className="input-section">
-                            <button type="submit">Submit Commission</button>
+                            <button type="submit">Submit Application</button>
                         </div>
                     </form>
                 </div>
